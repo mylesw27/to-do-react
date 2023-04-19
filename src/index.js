@@ -1,11 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import MyList from './MyList';
 import './index.css';
 
 const toDos = ["Listen to Hot Mulligan", "Drink coffee", "Eat breakfast"]
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
   <MyList theList={toDos} />,
-  document.getElementById('root')
 )
